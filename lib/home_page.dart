@@ -5,6 +5,6 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text("branch 1");
+    return Text("branch 2");
   }
 }

@@ -1,12 +1,13 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:untitled/get_user_data.dart';
+import 'package:untitled/home_page.dart';
 import 'firebase_options.dart';
 import 'package:flutter/material.dart';
 
 Future<void> main() async {
   runApp(const MyApp());
-  WidgetsFlutterBinding.ensureInitialized();
+ await WidgetsFlutterBinding.ensureInitialized();
   Fluttertoast.showToast;
 
   await Firebase.initializeApp(
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:  const YourWidget()
+      home:  const MyHomePage()
     );
   }
 }

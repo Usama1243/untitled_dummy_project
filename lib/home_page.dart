@@ -1,6 +1,7 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:untitled/crud_operations/add_data.dart';
+import 'package:untitled/utils/custom_colors.dart';
+
+import 'crud_operations/update_data.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -53,10 +54,21 @@ class _MyHomePageState extends State<MyHomePage> {
               ElevatedButton(
                 onPressed: () {
                   submitForm();
-                  AddDataFireStore().addUser(
-                      fNameController.text.trim(), lNameController.text.trim());
+
+                  // add data into FireStore
+                  //  AddDataFireStore().addUser(
+                  //      fNameController.text.trim(), lNameController.text.trim());
+
+                  //Update data into FireStore
+                  UpdateDataFireStore().updateUser();
+
+                  // delete data
+                  //     DeleteDataFireStore().deleteField();
                 },
-                child: const Text('Submit'),
+                child: Text(
+                  'Submit',
+                  style: TextStyle(color: CustomColors().pink),
+                ),
               ),
             ],
           ),

@@ -3,6 +3,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:provider/provider.dart';
 import 'package:untitled/screens/home/provider/provider_home_page.dart';
 import 'package:untitled/screens/home/home_page.dart';
+import 'package:untitled/widgets/custom_curved_nav_bar.dart';
 
 import 'firebase_options.dart';
 import 'package:flutter/material.dart';
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
           ),
-          home: Home()),
+          home: const CustomNavBar()),
     );
   }
 }

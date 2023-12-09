@@ -17,97 +17,155 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     String userName = "Usama!";
     return Scaffold(
-      body: CustomAppPadding(
+
+      body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            AppSpacer.header,
+
             //Hello, User
-            HelloUser(userName: userName),
-            AppSpacer.spacer20H,
-            const Text(
-              "Delicious Food",
-              style: AppTextStyle.style24B,
+            CustomHorizontalPadding(
+                value: 15, child: HelloUser(userName: userName)),
+
+            //Text
+            CustomHorizontalPadding(
+              value: 15,
+              child: const Text(
+                "Delicious Food",
+                style: AppTextStyle.style24B,
+              ),
             ),
-            const Text(
-              "Discover and Get Great Food",
-              style: AppTextStyle.lightStyle15B,
+            //Text
+            CustomHorizontalPadding(
+              value: 15,
+              child: const Text(
+                "Discover and Get Great Food",
+                style: AppTextStyle.lightStyle15B,
+              ),
             ),
             AppSpacer.spacer10H,
             //Food Categories
-            const FoodCategories(),
+            CustomHorizontalPadding(value: 15, child: const FoodCategories()),
+            AppSpacer.spacer10H,
+            CustomHorizontalPadding(
+              value: 15,
+              child: const Text(
+                "Hot Deals",
+                style: AppTextStyle.style15B,
+              ),
+            ),
             AppSpacer.spacer20H,
-
+            //Slider of Items
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  Container(
-                    margin: const EdgeInsets.symmetric(horizontal: 8 , vertical: 20.0),
-                    child: Material(
-                      elevation: 10,
-                      borderRadius: BorderRadius.circular(10),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Image.asset(
-                              "images/salad2.png",
-                              height: 150,
-                              width: 150,
-                            ),
-                            const Text(
-                              "Veggie Taco Hash",
-                              style: AppTextStyle.style15B,
-                            ),
-                            const Text(
-                              "Fresh and Healthy",
-                              style: AppTextStyle.lightStyle12B,
-                            ),
-                            const Text(
-                              "\$25",
-                              style: AppTextStyle.style12B,
-                            )
-                          ],
+                  AppSpacer.spacer5W,
+                  for (int i = 1; i < 10; i++)
+                    Container(
+                      margin: const EdgeInsets.only(left: 10, bottom: 20),
+                      child: Material(
+                        elevation: 10,
+                        borderRadius: BorderRadius.circular(10),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Image.asset(
+                                "images/salad2.png",
+                                height: 150,
+                                width: 150,
+                              ),
+                              SizedBox(
+                                width: MediaQuery.sizeOf(context).width / 2,
+                                child: const Text(
+                                  "Veggie Taco Hash",
+                                  style: AppTextStyle.style15B,
+                                ),
+                              ),
+                              SizedBox(
+                                width: MediaQuery.sizeOf(context).width / 2,
+                                child: const Text(
+                                  "Fresh and Healthy",
+                                  style: AppTextStyle.lightStyle12B,
+                                ),
+                              ),
+                              const Text(
+                                "\$25",
+                                style: AppTextStyle.style12B,
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  Container(
-                    margin: const EdgeInsets.symmetric(horizontal: 8 , vertical: 20.0),
+                  AppSpacer.spacer15W,
+                ],
+              ),
+            ),
+            // Row Menus
+            CustomHorizontalPadding(
+              value: 15,
+              child: const Text(
+                "Delicious Food",
+                style: AppTextStyle.style15B,
+              ),
+            ),
+            AppSpacer.spacer10H,
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                for (int i = 1; i < 10; i++)
+                  CustomHorizontalVerticalPadding(
+                    valueH: 15,
+                    valueV: 5,
                     child: Material(
                       elevation: 10,
                       borderRadius: BorderRadius.circular(10),
                       child: CustomAllPadding(
-                        value: 8,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                        value: 10,
+                        child: Row(
                           children: [
                             Image.asset(
                               "images/salad2.png",
-                              height: 150,
-                              width: 150,
+                              height: 100,
+                              width: 100,
                             ),
-                            const Text(
-                              "Veggie Taco Hash",
-                              style: AppTextStyle.style15B,
-                            ),
-                            const Text(
-                              "Fresh and Healthy",
-                              style: AppTextStyle.lightStyle12B,
-                            ),
-                            const Text(
-                              "\$25",
-                              style: AppTextStyle.style12B,
+                            AppSpacer.spacer20W,
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                SizedBox(
+                                  width: MediaQuery.sizeOf(context).width / 2,
+                                  child: const Text(
+                                    "Veggie Taco Hash",
+                                    style: AppTextStyle.style15B,
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: MediaQuery.sizeOf(context).width / 2,
+                                  child: const Text(
+                                    "Fresh and Healthy",
+                                    style: AppTextStyle.lightStyle12B,
+                                  ),
+                                ),
+                                const Text(
+                                  "\$25",
+                                  style: AppTextStyle.style12B,
+                                )
+                              ],
                             )
                           ],
                         ),
                       ),
                     ),
                   ),
-                ],
-              ),
-            )
+              ],
+            ),
           ],
         ),
       ),

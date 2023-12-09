@@ -42,6 +42,8 @@ dependencies:
   firebase_auth: ^4.15.0
   sign_in_button: ^3.2.0
   provider:
+  curved_navigation_bar: ^1.0.3
+
 
 dev_dependencies:
   flutter_test:

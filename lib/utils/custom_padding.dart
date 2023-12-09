@@ -45,6 +45,24 @@ class CustomVerticalPadding extends StatelessWidget {
     );
   }
 }
+class CustomHorizontalVerticalPadding extends StatelessWidget {
+  double valueH;
+  double valueV;
+
+
+  Widget child;
+
+  CustomHorizontalVerticalPadding(
+      {super.key, required this.child, required this.valueH,required this.valueV});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: valueH ,vertical: valueV),
+      child: child,
+    );
+  }
+}
 
 class CustomAllPadding extends StatelessWidget {
   double value;

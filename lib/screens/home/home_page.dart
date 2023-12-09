@@ -26,14 +26,88 @@ class _HomeState extends State<Home> {
             AppSpacer.spacer20H,
             const Text(
               "Delicious Food",
-              style: AppTextStyle.heading24B,
+              style: AppTextStyle.style24B,
             ),
             const Text(
               "Discover and Get Great Food",
-              style: AppTextStyle.lightHeading16B,
+              style: AppTextStyle.lightStyle15B,
             ),
             AppSpacer.spacer10H,
+            //Food Categories
             const FoodCategories(),
+            AppSpacer.spacer20H,
+
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 8 , vertical: 20.0),
+                    child: Material(
+                      elevation: 10,
+                      borderRadius: BorderRadius.circular(10),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Image.asset(
+                              "images/salad2.png",
+                              height: 150,
+                              width: 150,
+                            ),
+                            const Text(
+                              "Veggie Taco Hash",
+                              style: AppTextStyle.style15B,
+                            ),
+                            const Text(
+                              "Fresh and Healthy",
+                              style: AppTextStyle.lightStyle12B,
+                            ),
+                            const Text(
+                              "\$25",
+                              style: AppTextStyle.style12B,
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 8 , vertical: 20.0),
+                    child: Material(
+                      elevation: 10,
+                      borderRadius: BorderRadius.circular(10),
+                      child: CustomAllPadding(
+                        value: 8,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Image.asset(
+                              "images/salad2.png",
+                              height: 150,
+                              width: 150,
+                            ),
+                            const Text(
+                              "Veggie Taco Hash",
+                              style: AppTextStyle.style15B,
+                            ),
+                            const Text(
+                              "Fresh and Healthy",
+                              style: AppTextStyle.lightStyle12B,
+                            ),
+                            const Text(
+                              "\$25",
+                              style: AppTextStyle.style12B,
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),

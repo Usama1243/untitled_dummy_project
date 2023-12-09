@@ -13,14 +13,17 @@ class FoodCategories extends StatelessWidget {
       return Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
+          // Ice Cream
           InkWell(
+            borderRadius: BorderRadius.circular(10),
+
             onTap: () {
               activeItem.activeStatusIceCream();
             },
             child: Material(
-              color: activeItem.iceCreamGetter ? Colors.black : Colors.white,
-              elevation: 20,
+              elevation: activeItem.iceCreamGetter ? 40 : 5,
               shadowColor: Colors.grey,
+              surfaceTintColor: activeItem.iceCreamGetter ? Colors.pinkAccent : Colors.white,
               borderRadius: BorderRadius.circular(10),
               child: Padding(
                 padding: const EdgeInsets.all(5.0),
@@ -29,20 +32,23 @@ class FoodCategories extends StatelessWidget {
                   height: 40,
                   width: 40,
                   color:
-                      activeItem.iceCreamGetter ? Colors.white : Colors.black,
+                      activeItem.iceCreamGetter ? Colors.pink : Colors.black,
                   fit: BoxFit.cover,
                 ),
               ),
             ),
           ),
+          //Pizza
           InkWell(
+            borderRadius: BorderRadius.circular(10),
+
             onTap: () {
               activeItem.activeStatusPizza();
             },
             child: Material(
-              color: activeItem.pizzaGetter ? Colors.black : Colors.white,
-              elevation: 20,
+              elevation: activeItem.pizzaGetter ? 40 : 5,
               shadowColor: Colors.grey,
+              surfaceTintColor: activeItem.pizzaGetter ?Colors.red  :   Colors.white,
               borderRadius: BorderRadius.circular(10),
               child: Padding(
                 padding: const EdgeInsets.all(5.0),
@@ -50,20 +56,23 @@ class FoodCategories extends StatelessWidget {
                   "images/pizza.png",
                   height: 40,
                   width: 40,
-                  color: activeItem.pizzaGetter ? Colors.white : Colors.black,
+                  color: activeItem.pizzaGetter ?  Colors.orange :Colors.black,
                   fit: BoxFit.cover,
                 ),
               ),
             ),
           ),
+          //Salad
           InkWell(
+            borderRadius: BorderRadius.circular(10),
             onTap: () {
               activeItem.activeStatusSalad();
             },
             child: Material(
-              color: activeItem.saladGetter ? Colors.black : Colors.white,
-              elevation: 20,
+              elevation: activeItem.saladGetter ? 40 : 5,
               shadowColor: Colors.grey,
+              surfaceTintColor:
+                  activeItem.saladGetter ?Colors.green :  Colors.white ,
               borderRadius: BorderRadius.circular(10),
               child: Padding(
                 padding: const EdgeInsets.all(5.0),
@@ -71,20 +80,23 @@ class FoodCategories extends StatelessWidget {
                   "images/salad.png",
                   height: 40,
                   width: 40,
-                  color: activeItem.saladGetter ? Colors.white : Colors.black,
+                  color: activeItem.saladGetter ?  Colors.green :Colors.black,
                   fit: BoxFit.cover,
                 ),
               ),
             ),
           ),
+          // burger
           InkWell(
+            borderRadius: BorderRadius.circular(10),
             onTap: () {
               activeItem.activeStatusBurger();
             },
             child: Material(
-              color: activeItem.burgerGetter ? Colors.black : Colors.white,
-              elevation: 20,
+              elevation: activeItem.burgerGetter ? 40 : 5,
               shadowColor: Colors.grey,
+              surfaceTintColor:
+                  activeItem.burgerGetter ? Colors.yellow  :  Colors.white,
               borderRadius: BorderRadius.circular(10),
               child: Padding(
                 padding: const EdgeInsets.all(5.0),
@@ -92,7 +104,7 @@ class FoodCategories extends StatelessWidget {
                   "images/burger.png",
                   height: 40,
                   width: 40,
-                  color: activeItem.burgerGetter ? Colors.white : Colors.black,
+                  color: activeItem.burgerGetter ? Colors.brown  : Colors.black,
                   fit: BoxFit.cover,
                 ),
               ),

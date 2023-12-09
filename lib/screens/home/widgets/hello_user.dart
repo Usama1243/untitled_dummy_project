@@ -16,15 +16,16 @@ class HelloUser extends StatelessWidget {
       children: [
         Text(
           "Hello, $userName",
-          style: AppTextStyle.heading20B,
+          style: AppTextStyle.style20B,
         ),
-        Container(
-            decoration: const BoxDecoration(
-                color: Colors.black, shape: BoxShape.circle),
+        Material(
+            color: Colors.black,
+            elevation: 20,
+            borderRadius: BorderRadius.circular(10),
             child: const Padding(
               padding: EdgeInsets.all(8.0),
               child: Icon(
-                size: 15,
+                size: 18,
                 Icons.shopping_cart_outlined,
                 color: Colors.white,
               ),

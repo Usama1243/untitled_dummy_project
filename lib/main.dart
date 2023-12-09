@@ -1,8 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:provider/provider.dart';
-import 'package:untitled/provider/provider_home_page.dart';
-import 'package:untitled/screens/home_page.dart';
+import 'package:untitled/screens/home/provider/provider_home_page.dart';
+import 'package:untitled/screens/home/home_page.dart';
 
 import 'firebase_options.dart';
 import 'package:flutter/material.dart';

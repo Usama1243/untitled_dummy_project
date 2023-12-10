@@ -1,12 +1,12 @@
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:provider/provider.dart';
 import 'package:untitled/screens/home/provider/provider_home_page.dart';
-import 'package:untitled/screens/home/home_page.dart';
-import 'package:untitled/widgets/custom_curved_nav_bar.dart';
+import 'package:untitled/widgets/custom_curved_nav_bar/custom_curved_nav_bar.dart';
+import 'package:untitled/widgets/custom_curved_nav_bar/provider_curved_nav_bar.dart';
 
 import 'firebase_options.dart';
-import 'package:flutter/material.dart';
 
 Future<void> main() async {
   runApp(const MyApp());
@@ -28,6 +28,9 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(
           create: (context) => HomeProvider(),
         ),
+        ChangeNotifierProvider(
+          create: (context) => CurvedNavBarProvider(),
+        ),
       ],
       child: MaterialApp(
           debugShowCheckedModeBanner: false,
@@ -36,7 +39,7 @@ class MyApp extends StatelessWidget {
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
           ),
-          home: const CustomNavBar()),
+          home: CustomNavBar()),
     );
   }
 }

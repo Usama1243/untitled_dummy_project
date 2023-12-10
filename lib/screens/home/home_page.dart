@@ -70,33 +70,30 @@ class _HomeState extends State<Home> {
                         borderRadius: BorderRadius.circular(10),
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Image.asset(
-                                "images/salad2.png",
-                                height: 150,
-                                width: 150,
-                              ),
-                              SizedBox(
-                                width: MediaQuery.sizeOf(context).width / 2,
-                                child: const Text(
+                          child: Center(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Image.asset(
+                                  "images/salad2.png",
+                                  height: 150,
+                                  width: 150,
+                                ),
+                                const Text(
                                   "Veggie Taco Hash",
                                   style: AppTextStyle.style15B,
                                 ),
-                              ),
-                              SizedBox(
-                                width: MediaQuery.sizeOf(context).width / 2,
-                                child: const Text(
+                                const Text(
                                   "Fresh and Healthy",
                                   style: AppTextStyle.lightStyle12B,
                                 ),
-                              ),
-                              const Text(
-                                "\$25",
-                                style: AppTextStyle.style12B,
-                              )
-                            ],
+                                const Text(
+                                  "\$25",
+                                  style: AppTextStyle.style12B,
+                                )
+                              ],
+                            ),
                           ),
                         ),
                       ),
@@ -139,19 +136,13 @@ class _HomeState extends State<Home> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                SizedBox(
-                                  width: MediaQuery.sizeOf(context).width / 2,
-                                  child: const Text(
-                                    "Veggie Taco Hash",
-                                    style: AppTextStyle.style15B,
-                                  ),
+                                const Text(
+                                  "Veggie Taco Hash",
+                                  style: AppTextStyle.style15B,
                                 ),
-                                SizedBox(
-                                  width: MediaQuery.sizeOf(context).width / 2,
-                                  child: const Text(
-                                    "Fresh and Healthy",
-                                    style: AppTextStyle.lightStyle12B,
-                                  ),
+                                const Text(
+                                  "Fresh and Healthy",
+                                  style: AppTextStyle.lightStyle12B,
                                 ),
                                 const Text(
                                   "\$25",

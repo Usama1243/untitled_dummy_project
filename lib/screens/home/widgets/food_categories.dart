@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:untitled/screens/home/provider/provider_home_page.dart';
+import 'package:untitled/screens/home/provider_home/provider_home_page.dart';
 
 class FoodCategories extends StatelessWidget {
   const FoodCategories({

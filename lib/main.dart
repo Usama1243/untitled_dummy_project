@@ -2,7 +2,8 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:provider/provider.dart';
-import 'package:untitled/screens/home/provider/provider_home_page.dart';
+import 'package:untitled/screens/home/provider_home/provider_home_page.dart';
+import 'package:untitled/screens/item_details/provider_item_details/provider_item_detail.dart';
 import 'package:untitled/widgets/custom_curved_nav_bar/custom_curved_nav_bar.dart';
 import 'package:untitled/widgets/custom_curved_nav_bar/provider_curved_nav_bar.dart';
 
@@ -30,6 +31,8 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           create: (context) => CurvedNavBarProvider(),
+        ), ChangeNotifierProvider(
+          create: (context) => ItemDetailProvider(),
         ),
       ],
       child: MaterialApp(
